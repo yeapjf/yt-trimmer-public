@@ -1,0 +1,172 @@
+#trim-widget {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    float: right;
+    width: auto;
+    height: 23px;
+    line-height: 23px;
+}
+
+#trim-widget > * {
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#trim-status {
+    display: inline-block;
+    background: #888888;
+    border-radius: 50%;
+}
+
+#trim-form {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+}
+
+#trim-box {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    position: absolute;
+    padding: 1em;
+    width: 100%;
+    height: auto;
+    background: rgba(42, 45, 50, 0.85);
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+}
+
+#trim-box > i {
+    font-size: 100%;
+    line-height: normal;
+    vertical-align:middle;
+}
+
+.trim-label {
+    margin-left: 0.7em;
+}
+
+.trim-input {
+    box-sizing: border-box;
+    outline: none;
+    outline-width: 0px;
+    box-shadow: none;
+    padding: 0px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    text-align: center;
+    height: 100%;
+    width: 3em;
+    color: inherit;
+}
+
+.trim-input:not(:focus):invalid {
+    box-shadow: none;
+}
+
+#trim-widget.old-layout {
+    margin-top: -27px;
+}
+
+#trim-widget.old-layout #trim-status {
+    width: 1em;
+    height: 1em;
+}
+
+#trim-widget.old-layout #trim-box {
+    top: 55px;
+    margin-left: 10px;
+    max-width: 223px;
+    font-size: 90%;
+}
+
+#trim-widget.new-layout {
+    margin-top: 5px;
+    margin-left: 5em;
+    width: 289px;
+}
+
+#trim-widget.new-layout > * {
+    font-size: 1.5em;
+}
+
+#trim-widget.new-layout #trim-status {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+#trim-widget.new-layout #trim-box {
+    top: 60px;
+    margin-left: 4px;
+    max-width: 253px;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#trim-widget.music-layout {
+    margin-top: 12px;
+    margin-left: 11em;
+    width: 289px;
+}
+
+#trim-widget.music-layout > * {
+    font-size: 1.5em;
+}
+
+#trim-widget.music-layout #trim-status {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+#trim-widget.music-layout #trim-form {
+    margin-top: 2px
+}
+
+#trim-widget.music-layout #trim-box {
+    top: 70px;
+    margin-left: 4px;
+    max-width: 253px;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#trim-button {
+  	cursor: pointer;
+    margin-left: 0.9em;
+    background-color: inherit;
+    padding: 2px 10px 2px 10px;
+    border: 1.6px solid black;
+    border-color: #2793E6;
+    color: #2793E6;
+}
+
+#trim-button:hover {
+  	background-color: #2793E6;
+    color: white;
+}
+
+.show-status {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.show-noti {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+::placeholder {
+    font-style: italic;
+}

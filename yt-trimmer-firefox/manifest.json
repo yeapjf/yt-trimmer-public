@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name"           : "YouTube Trimmer",
+  "version"        : "2.1",
+  "description"    : "Trim YouTube videos once and it will be automated the next time!",
+  "applications"   : {
+    "gecko"        : {
+      "id": "youtube-trimmer@ytt.com"
+    }
+  },
+  "content_scripts": [
+    {
+      "js"         : [
+        "utils/inject-script.js",
+        "utils/inject-style.js",
+        "trim.js",
+        "youtube-trimmer-2.1.js"
+      ],
+      "matches"    : ["https://*.youtube.com/*"],
+      "run_at"     : "document_start"
+    }
+  ],
+  "background"     : {
+    "page"         : "background.html"
+  },
+  "permissions"    : [
+    "tabs",
+    "storage",
+    "identity",
+    "*://www.googleapis.com/*",
+    "*://accounts.google.com/*"
+  ],
+  "page_action"    : {
+    "show_matches" : ["https://*.youtube.com/*"],
+    "default_popup": "popup.html",
+    "default_icon" : "images/yt-trimmer-logo128.png"
+  },
+  "icons"          : {
+    "48"           : "images/yt-trimmer-logo48.png",
+    "96"           : "images/yt-trimmer-logo96.png"
+  },
+  "web_accessible_resources": ["css/base.css", "utils/time-conversion.js"],
+  "content_security_policy" :"script-src 'self' https://www.gstatic.com/ https://cdn.firebase.com https://www.gstatic.com/firebasejs/5.4.1/firebase.js https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}

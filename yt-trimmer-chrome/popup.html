@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Trimmer Popup</title>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script src="popup.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-title">
+        <span id="popup-title">YouTube Trimmer</span>
+      </div>
+      <div class="grid-icon">
+        <i id="auth-icon" class="material-icons">cloud_off</i>
+      </div>
+      <div class="grid-label">
+        <p id="auth-status">Signed Out</p>
+      </div>
+      <div class="grid-icon">
+        <input id="ext-ui-option" type="checkbox" name="ext-ui-option" checked="checked">
+      </div>
+      <div class="grid-label">
+        <label for="ext-ui-option">Show Extension UI</label>
+      </div>
+      <div class="grid-button-1">
+        <a id="show-list-button" class="button is-small is-rounded is-fullwidth is-outlined is-info">Show List</a>
+      </div>
+      <div class="grid-button-2">
+        <a id="sign-in-out-button" class="button is-small is-rounded is-fullwidth is-outlined is-success">Sign In</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+#trim-widget {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    float: right;
+    height: 23px;
+    line-height: 23px;
+}
+
+#trim-widget > * {
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#trim-status {
+    display: inline-block;
+    background: #888888;
+    border-radius: 50%;
+}
+
+#trim-form {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+}
+
+#trim-box {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    position: absolute;
+    padding: 1em;
+    width: 100%;
+    height: auto;
+    background: rgba(42, 45, 50, 0.85);
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+}
+
+#trim-box > i {
+    font-size: 100%;
+    line-height: normal;
+    vertical-align:middle;
+}
+
+.trim-label {
+    margin-left: 0.9em;
+}
+
+.trim-input {
+    box-sizing: border-box;
+    outline: none;
+    padding: 0px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    text-align: center;
+    height: 100%;
+    width: 3em;
+}
+
+.trim-input:not(:focus):invalid {
+    box-shadow: none;
+}
+
+#trim-widget.old-layout {
+    margin-top: -27px;
+}
+
+#trim-widget.old-layout #trim-status {
+    width: 1em;
+    height: 1em;
+}
+
+#trim-widget.old-layout #trim-box {
+    top: 55px;
+    margin-left: 12px;
+    max-width: 223px;
+    font-size: 90%;
+}
+
+#trim-widget.new-layout {
+    margin-top: 5px;
+    margin-left: 5em;
+    width: 289px;
+}
+
+#trim-widget.new-layout > * {
+    font-size: 1.5em;
+}
+
+#trim-widget.new-layout #trim-status {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+#trim-widget.new-layout #trim-form {
+    margin-top: 2px
+}
+
+#trim-widget.new-layout #trim-box {
+    top: 70px;
+    margin-left: 18px;
+    max-width: 253px;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#trim-button {
+    cursor: pointer;
+    margin-left: 0.9em;
+    background: #2980b9;
+    padding: 4px 12px 4px 12px;
+    border: none;
+    color: #fff;
+}
+
+#trim-button:hover {
+    background: #2c3e50;
+    box-shadow:none;
+}
+
+.show-status {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.show-noti {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-body {
+    padding: 2px 16px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+::placeholder {
+    font-style: italic;
+}
